@@ -22,3 +22,5 @@ Response: Hello! How can I assist you today?
 *visit [platform.openai.com] for the key
 
 **NB** There is no free trial for the API
+
+Without credit, the API throws errors
