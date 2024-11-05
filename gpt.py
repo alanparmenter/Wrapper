@@ -23,7 +23,7 @@ def get_llm_response(prompt):
             "content": prompt
           }
         ],
-    temperature=0
+    temperature=0 # 1.0 gives more random output
     )
     response = completion.choices[0].message.content
     return response
