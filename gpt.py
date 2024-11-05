@@ -7,7 +7,12 @@ load_dotenv('.env', override=True)
 openai_api_key = os.getenv("OPENAI_API_KEY")
 client = openai.OpenAI(api_key = openai_api_key)
 
-os.system('clear')
+def clear_screen():
+    if os.name == 'nt':  # Windows
+        os.system('cls')
+    else:  # Linux and macOS
+        os.system('clear')
+clear_screen()
 
 def get_llm_response(prompt):
     completion = client.chat.completions.create(
