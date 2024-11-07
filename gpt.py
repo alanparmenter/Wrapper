@@ -27,6 +27,7 @@ def get_llm_response(prompt):
     )
     response = completion.choices[0].message.content
     return response
+    
 while True:
     prompt = input('Prompt: ')
     with open('gpt_output.txt', 'a') as file:
