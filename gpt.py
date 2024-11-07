@@ -17,13 +17,8 @@ clear_screen()
 def get_llm_response(prompt):
     completion = client.chat.completions.create(
         model="gpt-4o",
-        messages=[
-          {
-            "role": "user",
-            "content": prompt
-          }
-        ],
-    temperature=0 # 1.0 gives more random output
+        messages=[{ "role": "user", "content": prompt }],
+        temperature=0 # 1.0 gives more random output
     )
     response = completion.choices[0].message.content
     return response
